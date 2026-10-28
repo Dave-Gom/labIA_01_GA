@@ -50,12 +50,26 @@
 
 ## Estado
 
-- **Pasos completados:** ninguno todavía. Plan propuesto, esperando aprobación de David.
-- **Siguiente paso:** Paso 0 — armar el entorno local.
+- **Pasos completados:** Paso 0 (entorno) — hecho salvo la extensión de VS Code.
+- **Pendiente del Paso 0:** instalar `ms-toolsai.jupyter` (`code --install-extension ms-toolsai.jupyter`).
+- **Siguiente paso:** Paso 1 — estructura del notebook + las 3 preguntas teóricas de la Parte 1.
+
+### Entorno verificado (2026-10-28)
+
+- `.python-version` = 3.13.2 · `.venv/` con Python 3.13.2
+- numpy 2.5.4 · matplotlib 3.11.2 · pandas 3.1.0 · prettytable 3.18.0 · ipykernel 7.4.0 · nbconvert 7.17.2
+- `requirements.txt` congelado (61 líneas)
+- David inicializó un repo git en `lab_1`. Commit inicial: `.python-version` + `PROGRESO.md`.
+  `requirements.txt` quedó sin commitear; falta `.gitignore` en la raíz
+  (`__pycache__/`, `.ipynb_checkpoints/`, `.DS_Store`).
+  `.venv/` se auto-ignora: `python -m venv` (3.11+) le escribe adentro un `.gitignore` con `*`.
 
 ## Conceptos de Python ya vistos
 
-(ninguno todavía)
+- **Paso 0:** `pyenv local` (≈ `.nvmrc`), `venv` (≈ `node_modules` pero hay que ACTIVARLO),
+  `pip` (≈ npm), `requirements.txt` (≈ package.json), `python -m <modulo>`,
+  por qué Python no resuelve dependencias por carpeta como hace `node` con `node_modules`,
+  y la distinción venv activado en la terminal vs. kernel seleccionado en VS Code.
 
 ## Notas / gotchas detectados en el código del tutorial
 
